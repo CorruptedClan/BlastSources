@@ -7,12 +7,12 @@ KeySystemUI.New({
 })
 repeat task.wait() until KeySystemUI.Finished() or KeySystemUI.Closed
 if KeySystemUI.Finished() and KeySystemUI.Closed == false then
-    MakeUi()
+    Launch()
 else
     print("Player closed the GUI.")
 end
 
-function MakeUi()
+local function Launch()
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
 local Window = OrionLib:MakeWindow({Name = "Blast Hub [Clicker Madness]", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
 
