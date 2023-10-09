@@ -14,20 +14,7 @@ end
 
 function MakeUi()
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
-local Window = OrionLib:MakeWindow({Name = "Blast Hub [Clicker Simulator]", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
-
---[[
-Name = <Blast Hub> - The name of the UI.
-HidePremium = <bool> - Whether or not the user details shows Premium status or not.
-SaveConfig = <bool> - Toggles the config saving in the UI.
-ConfigFolder = <string> - The name of the folder where the configs are saved.
-IntroEnabled = <bool> - Whether or not to show the intro animation.
-IntroText = <string> - Text to show in the intro animation.
-IntroIcon = <string> - URL to the image you want to use in the intro animation.
-Icon = <string> - URL to the image you want displayed on the window.
-CloseCallback = <function> - Function to execute when the window is closed.
-]]
-
+local Window = OrionLib:MakeWindow({Name = "Blast Hub [Clicker Madness]", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
 
 
 local Tab = Window:MakeTab({
@@ -60,9 +47,9 @@ Tab:AddToggle({
 	Name = "Super fast click",
 	Default = false,
 	Callback = function(Value)
-		getgenv(). Super = Value
+		getgenv().Super = Value
 		
-		while getgenv(). Super do
+		while getgenv().Super do
 		game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.ClickService.Click:FireServer(1)
 		wait(0.0001)
 		end
@@ -74,9 +61,9 @@ Tab:AddToggle({
 	Name = "Auto Attack Boss",
 	Default = false,
 	Callback = function(Value)
-		     getgenv(). Boss = Value
+		     getgenv().Boss = Value
 		
-		while getgenv(). Boss do
+		while getgenv().Boss do
 		game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.CursorCannonService.FireBoss:FireServer("Zombie")
 		wait(0.01)
 		end
