@@ -1,3 +1,18 @@
+local KeySystemUI = loadstring(game:HttpGet("https://raw.githubusercontent.com/MaGiXxScripter0/keysystemv2api/master/ui/xrer_mstudio45.lua"))()
+KeySystemUI.New({
+    ApplicationName = "blasthub", -- Your Key System Application Name
+    Name = "Blast Hub", -- Your Script name
+    Info = "Get key for Blast Hub", -- Info text in the GUI, keep empty for default text.
+    DiscordInvite = "" -- Optional.
+})
+repeat task.wait() until KeySystemUI.Finished() or KeySystemUI.Closed
+if KeySystemUI.Finished() and KeySystemUI.Closed == false then
+    MakeUi()
+else
+    print("Player closed the GUI.")
+end
+
+function MakeUi()
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
 local Window = OrionLib:MakeWindow({Name = "Blast Hub [Clicker Simulator]", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
 
