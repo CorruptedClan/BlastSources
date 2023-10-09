@@ -223,15 +223,13 @@ rootPart.CFrame = CFrame.new(-284.0956726074219, 8.105056762695312, -2586.986816
 })
 
 
-local Tab = Window:MakeTab({
+local credits = Window:MakeTab({
 	Name = "Credits",
 	Icon = "rbxassetid://4483345998",
 	PremiumOnly = false
 })
 
-
-local Section = Tab:AddSection({
+local Section = credits:AddSection({
 	Name = "Owner, Scripting: Robloxblast, Co Owner Scripting: RoJav"
 })
-
 end
