@@ -7,13 +7,7 @@ KeySystemUI.New({
 })
 repeat task.wait() until KeySystemUI.Finished() or KeySystemUI.Closed
 if KeySystemUI.Finished() and KeySystemUI.Closed == false then
-    Launch()
-else
-    print("Player closed the GUI.")
-end
-
-local function Launch()
-local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+    local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
 local Window = OrionLib:MakeWindow({Name = "Blast Hub [Clicker Madness]", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
 
 
@@ -232,4 +226,6 @@ local credits = Window:MakeTab({
 local Section = credits:AddSection({
 	Name = "Owner, Scripting: Robloxblast, Co Owner Scripting: RoJav"
 })
+else
+    print("Player closed the GUI.")
 end
