@@ -11,7 +11,19 @@ KeySystemUI.New({
 repeat task.wait() until KeySystemUI.Finished() or KeySystemUI.Closed
 if KeySystemUI.Finished() and KeySystemUI.Closed == false then
     local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
-local Window = OrionLib:MakeWindow({Name = "Blast Hub [Break In 2]", HidePremium = false, SaveConfig = true, ConfigFolder = "BlastBI2", IntroText = "Blast on Top"})
+local Window = OrionLib:MakeWindow({Name = "Blast Hub [Break In 2]", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
+
+--[[
+Name = <string> - The name of the UI.
+HidePremium = <bool> - Whether or not the user details shows Premium status or not.
+SaveConfig = <bool> - Toggles the config saving in the UI.
+ConfigFolder = <string> - The name of the folder where the configs are saved.
+IntroEnabled = <bool> - Whether or not to show the intro animation.
+IntroText = <string> - Text to show in the intro animation.
+IntroIcon = <string> - URL to the image you want to use in the intro animation.
+Icon = <string> - URL to the image you want displayed on the window.
+CloseCallback = <function> - Function to execute when the window is closed.
+]]
 
 
 local Tab = Window:MakeTab({
@@ -193,6 +205,14 @@ Tab:AddButton({
 })
 
 
+Tab:AddButton({
+	Name = "Get Hammer",
+	Callback = function()
+      		game:GetService("ReplicatedStorage").Events.ReplicateVending:FireServer("Weapons","Hammer")
+  	end    
+})
+
+
 local Tab = Window:MakeTab({
 	Name = "Others",
 	Icon = "rbxassetid://4483345998",
@@ -225,6 +245,14 @@ Tab:AddToggle({
 		wait(0.2)
 		end
     	end    
+})
+
+
+Tab:AddButton({
+	Name = "Get Key",
+	Callback = function()
+      		game:GetService("ReplicatedStorage").Events.ReplicateVending:FireServer("Drinks","Key")
+  	end    
 })
 
 
