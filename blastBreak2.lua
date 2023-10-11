@@ -168,7 +168,7 @@ Tab:AddButton({
 })
 
 local Section = Tab:AddSection({
-	Name = "Weapon (More Weapons Soon)"
+	Name = "Weapons"
 })
 
 
