@@ -80,18 +80,13 @@ Tab:AddToggle({
 })
 
 
-Tab:AddToggle({
-	Name = "Inf Golden Apple",
-	Default = false,
-	Callback = function(Value)
-		   getgenv(). Golden = Value
-		
-		while getgenv(). Golden do
-		game:GetService("ReplicatedStorage").Events.GiveTool:FireServer("GoldenApple")
-		wait(0.001)
-		end
-	    end    
+Tab:AddButton({
+	Name = "Eat one Golden Apple and all will be Healed",
+	Callback = function()
+      		game:GetService("ReplicatedStorage").Events.GiveTool:FireServer("GoldenApple")
+  	end    
 })
+
 
 
 Tab:AddToggle({
@@ -150,47 +145,27 @@ Tab:AddToggle({
 })
 
 
-Tab:AddToggle({
-	Name = "Inf Stacked Cola",
-	Default = false,
-	Callback = function(Value)
-         getgenv(). Stack = Value
-         
-         while getgenv(). Stack do
-         game:GetService("ReplicatedStorage").Events.StackItem:FireServer("BloxyCola")
-         wait(0.2)
-         end
-    	end    
+Tab:AddButton({
+	Name = "Get Stacked Cola",
+	Callback = function()
+            game:GetService("ReplicatedStorage").Events.Stacked:FireServer("BloxyCola")
+        end
+})
+
+Tab:AddButton({
+	Name = "Get Stacked Pizza",
+	Callback = function()
+     		game:GetService("ReplicatedStorage").Events.GiveTool:FireServer("PizzaBox")
+        end
 })
 
 
-Tab:AddToggle({
-	Name = "Inf Stacked Pizza Box",
-	Default = false,
-	Callback = function(Value)
-		getgenv(). Stapi = Value
-		
-		while getgenv(). Stapi do
-		game:GetService("ReplicatedStorage").Events.StackItem:FireServer("PizzaBox")
-		wait(0.2)
-		end
-    	end    
+Tab:AddButton({
+	Name = "Get Stacked Rainbow Pizza",
+	Callback = function()
+      	 game:GetService("ReplicatedStorage").Events.GiveTool:FireServer("RainbowPizzaBox")
+      end
 })
-
-
-Tab:AddToggle({
-	Name = "Inf Stacked Rainbow Pizza",
-	Default = false,
-	Callback = function(Value)
-		getgenv(). Rainsta = Value
-		
-		while getgenv(). Rainsta do
-		game:GetService("ReplicatedStorage").Events.StackItem:FireServer("RainbowPizzaBox")
-		wait(0.2)
-		end
-	    end    
-})
-
 
 local Section = Tab:AddSection({
 	Name = "Weapon (More Weapons Soon)"
@@ -208,7 +183,31 @@ Tab:AddButton({
 Tab:AddButton({
 	Name = "Get Hammer",
 	Callback = function()
-      		game:GetService("ReplicatedStorage").Events.ReplicateVending:FireServer("Weapons","Hammer")
+      		game:GetService("ReplicatedStorage").Events.Vending:FireServer(3,"Hammer","Weapons","FoxIDM")
+  	end    
+})
+
+
+Tab:AddButton({
+	Name = "Get Wrench",
+	Callback = function()
+      		game:GetService("ReplicatedStorage").Events.Vending:FireServer(3,"Wrench","Weapons","FoxIDM")
+  	end    
+})
+
+
+Tab:AddButton({
+	Name = "Get Broom",
+	Callback = function()
+      		game:GetService("ReplicatedStorage").Events.Vending:FireServer(3,"Broom","Weapons","FoxIDM")
+  	end    
+})
+
+
+Tab:AddButton({
+	Name = "Get PitchFork",
+	Callback = function()
+      		game:GetService("ReplicatedStorage").Events.Vending:FireServer(3,"Pitchfork","Weapons","FoxIDM")
   	end    
 })
 
@@ -251,7 +250,15 @@ Tab:AddToggle({
 Tab:AddButton({
 	Name = "Get Key",
 	Callback = function()
-      		game:GetService("ReplicatedStorage").Events.ReplicateVending:FireServer("Drinks","Key")
+      		game:GetService("ReplicatedStorage").Events.GiveTool:FireServer("Key")
+  	end    
+})
+
+
+Tab:AddButton({
+	Name = "Get Battery",
+	Callback = function()
+      	  game:GetService("ReplicatedStorage").Events.GiveTool:FireServer("Battery")
   	end    
 })
 
