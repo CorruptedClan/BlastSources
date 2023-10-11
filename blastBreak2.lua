@@ -148,7 +148,7 @@ Tab:AddToggle({
 Tab:AddButton({
 	Name = "Get Stacked Cola",
 	Callback = function()
-            game:GetService("ReplicatedStorage").Events.Stacked:FireServer("BloxyCola")
+            game:GetService("ReplicatedStorage").Events.StackItem:FireServer("BloxyCola")
         end
 })
 
