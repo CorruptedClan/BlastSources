@@ -656,3 +656,33 @@ end
 		    game:GetService("VirtualUser"):Button2Up(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
 		end)
     end)
+
+--credits
+Tabs.Credits:AddParagraph({
+        Title = "Credits",
+        Content = "Scripter - EdxymRBLX \nSGA Owner - SponsoParNordVpn"
+    })
+
+Tabs.Main:AddButton({
+        Title = "Join Discord!",
+        Description = "Copy SGA Discord Link",
+        Callback = function()
+            setclipboard("https://discord.com/invite/6MpMKEBhYE")
+        end
+    })
+
+Tabs.Main:AddButton({
+        Title = "Subscribe to Sponso's youtube!",
+        Description = "Copy Sponso's YouTube Link",
+        Callback = function()
+            setclipboard("https://m.youtube.com/@le_rat2308/videos")
+        end
+    })
+
+Tabs.Main:AddButton({
+        Title = "Subscribe to EdxymRBLX's youtube!",
+        Description = "Copy EdxymRBLX's YouTube Link",
+        Callback = function()
+            setclipboard("https://m.youtube.com/@EdxymOnlind/videos")
+        end
+    })
