@@ -663,7 +663,7 @@ Tabs.Credits:AddParagraph({
         Content = "Scripter - EdxymRBLX \nSGA Owner - SponsoParNordVpn"
     })
 
-Tabs.Main:AddButton({
+Tabs.Credits:AddButton({
         Title = "Join Discord!",
         Description = "Copy SGA Discord Link",
         Callback = function()
@@ -671,7 +671,7 @@ Tabs.Main:AddButton({
         end
     })
 
-Tabs.Main:AddButton({
+Tabs.Credits:AddButton({
         Title = "Subscribe to Sponso's youtube!",
         Description = "Copy Sponso's YouTube Link",
         Callback = function()
@@ -679,7 +679,7 @@ Tabs.Main:AddButton({
         end
     })
 
-Tabs.Main:AddButton({
+Tabs.Credits:AddButton({
         Title = "Subscribe to EdxymRBLX's youtube!",
         Description = "Copy EdxymRBLX's YouTube Link",
         Callback = function()
