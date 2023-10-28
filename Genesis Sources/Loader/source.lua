@@ -1,3 +1,17 @@
+local SyncUI = loadstring(game:HttpGet('https://raw.githubusercontent.com/ZenithDust/Quantumix-Networks/main/Library/SyncUI/SyncV2.lua'))()
+SyncUI:Create({
+  Service = "genesis", --- Your actual panda auth service name
+  Name = "Genesis Z", --- Your hub name
+  Discord = "https://discord.com/invite/EPKrjgKfUW", --- Your discord link
+  Callback = function() --- What happen if key correct
+    MakeUi()
+  end,
+  SaveKey = true --- Save key or not
+})
+
+
+
+function MakeUi()
 local DrRayLibrary = loadstring(game:HttpGet("https://raw.githubusercontent.com/AZYsGithub/DrRay-UI-Library/main/DrRay.lua"))()
 
 local window = DrRayLibrary:Load("Genesis Z - Loader [BETA]", "")
@@ -76,4 +90,6 @@ end
 
 function LoadRCX()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/CorruptedClan/BlastSources/main/Genesis%20Sources/GenZ_RCX.lua"))()
+end
+
 end
