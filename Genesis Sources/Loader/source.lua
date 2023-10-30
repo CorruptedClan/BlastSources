@@ -2,7 +2,7 @@ local SyncUI = loadstring(game:HttpGet('https://raw.githubusercontent.com/Zenith
 SyncUI:Create({
   Service = "genesis", --- Your actual panda auth service name
   Name = "Genesis Z", --- Your hub name
-  Discord = "https://discord.com/invite/EPKrjgKfUW", --- Your discord link
+  Discord = "https://dsc.gg/genesis-z", --- Your discord link
   Callback = function() --- What happen if key correct
     MakeUi()
   end,
@@ -90,6 +90,10 @@ end
 
 function LoadRCX()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/CorruptedClan/BlastSources/main/Genesis%20Sources/GenZ_RCX.lua"))()
+end
+
+function LoadYAP()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/CorruptedClan/BlastSources/main/Genesis%20Sources/GenZ_YAP.lua"))()
 end
 
 end
