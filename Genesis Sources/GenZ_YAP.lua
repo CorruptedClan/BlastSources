@@ -7,9 +7,9 @@ local Window = Fluent:CreateWindow({
     SubTitle = "https://dsc.gg/genesis-z",
     TabWidth = 80,
     Size = UDim2.fromOffset(580, 460),
-    Acrylic = blur, -- The blur may be detectable, setting this to false disables blur entirely
-    Theme = theme,
-    MinimizeKey = binder -- Used when theres no MinimizeKeybind
+    Acrylic = true, -- The blur may be detectable, setting this to false disables blur entirely
+    Theme = "Darker",
+    MinimizeKey = Enum.KeyCode.RightControl -- Used when theres no MinimizeKeybind
 })
 
 local Tabs = {
