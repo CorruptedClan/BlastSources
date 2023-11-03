@@ -1,5 +1,14 @@
 -- message to skidders if u get anything from here atleast give credits
-
+pcall(function()
+    if getgenv().Loaded then
+        print("Main script has been executed")
+    else
+        print("Main script has not been executed")
+        game.Players.LocalPlayer:Kick("Unautorized UI access !")
+        
+        while true do end
+    end
+end)
 
 --start
 local Fluent = loadstring(game:HttpGet("https://github.com/dawid-scripts/Fluent/releases/latest/download/Main.lua"))()
