@@ -4,7 +4,7 @@ local InterfaceManager = loadstring(game:HttpGet("https://raw.githubusercontent.
 
 local Window = Fluent:CreateWindow({
     Title = "Genesis Z | Arm Wrestling Simulator",
-    SubTitle = "https://dsc.gg/genesis-z",
+    SubTitle = "by Genesis Dev team",
     TabWidth = 160,
     Size = UDim2.fromOffset(580, 460),
     Acrylic = true, -- The blur may be detectable, setting this to false disables blur entirely
@@ -191,7 +191,7 @@ local Punch = Bag:AddToggle("Bag Start", {Title = "Start Punching Bags", Default
     end)
     
     --event = done
-    local Crystaline = Tabs.Event:AddSection("Crystaline Egg")
+    local Crystaline = Tabs.Event:AddSection("Mythic Egg")
     local RogueAi = Crystaline:AddToggle("Rogue", {Title = "Auto Fight Rogue AI", Default = false })
 
     RogueAi:OnChanged(function(Value)
@@ -215,7 +215,7 @@ local Punch = Bag:AddToggle("Bag Start", {Title = "Start Punching Bags", Default
         end
     end)
     
-    local Ween = Tabs.Event:AddSection("Halloween Event")
+ --[[   local Ween = Tabs.Event:AddSection("Halloween Event")
     
     local EggEvent = Ween:AddToggle("Farm", {Title = "Auto Farm Candy", Default = false })
     EggEvent:OnChanged(function(Value)
@@ -297,6 +297,7 @@ game:GetService("ReplicatedStorage").Packages._Index:FindFirstChild("sleitnick_k
 wait(0.1)
 end
     end)
+    ]]
     
     --misc = started
     Tabs.Misc:AddButton({
