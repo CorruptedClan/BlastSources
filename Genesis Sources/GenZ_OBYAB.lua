@@ -13,7 +13,7 @@ local Window = Fluent:CreateWindow({
 })
 
 local Tabs = {
-    Farms = Window:AddTab({ Title = "Main", Icon = "" }),
+    Main = Window:AddTab({ Title = "Main", Icon = "" }),
     Misc = Window:AddTab({ Title = "Misc", Icon = "" }),
     Credits = Window:AddTab({ Title = "Credits", Icon = "" })
 }
@@ -103,6 +103,15 @@ if targetPart then
 else
     warn("Target part not found")
 end
+elseif Game.PlaceId == place9 then
+local targetPart = game.Workspace.WorldMap.Checkpoints["41"]:FindFirstChild("Pole")
+
+if targetPart then
+    local rootPart = game.Players.LocalPlayer.Character.HumanoidRootPart
+    rootPart.CFrame = CFrame.new(targetPart.Position)
+else
+    warn("Target part not found")
+end
 end
 end
 
@@ -116,13 +125,14 @@ place6 = 14997446013
 place7 = 15063879640
 place8 = 15208940765
 place0 = 15131057422
+place9 = 15278398765
 
 --start
-local Bike = Tabs.Main:AddSection("Main")
+local Bike = Tabs.Main:AddSection("Event")
 
-local Dropdown = Bike:AddDropdown("NumberOfPotions", {
+local Dropdown = DumbellSection:AddDropdown("Dumbell Wordl", {
         Title = "Select Bike",
-        Values = {1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37, "more soon"},
+        Values = {1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44},
         Multi = false,
         Default = 1,
     })
