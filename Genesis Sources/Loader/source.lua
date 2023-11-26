@@ -364,6 +364,10 @@ scripts.newButton("Syr Hub | Universal", "Syr Hub", function()
     LoadUniversal()
 end)
 
+scripts.newButton("Blade Ball", "Genesis Z", function()
+    LoadBladeBall()
+end)
+
 scripts.newButton("Arm Wrestling Simulator", "Genesis Z", function()
     LoadAWS()
 end)
@@ -449,6 +453,10 @@ end
 
 function LoadOBYAB()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/CorruptedClan/BlastSources/main/Genesis%20Sources/GenZ_OBYAB.lua"))()
+end
+
+function LoadBladeBall()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/CorruptedClan/BlastSources/main/Genesis%20Sources/GenZ_Blade.lua"))()
 end
 
 --makeUi end
