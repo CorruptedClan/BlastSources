@@ -199,5 +199,5 @@ Tab:AddButton({
 })
 
 function LoadScript()
-loadstring(game:HttpGet("https://raw.githubusercontent.com/CorruptedClan/BlastSources/main/Genesis%20Sources/Loader/source.lua))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/CorruptedClan/BlastSources/main/Genesis%20Sources/Loader/source.lua"))()
 end
