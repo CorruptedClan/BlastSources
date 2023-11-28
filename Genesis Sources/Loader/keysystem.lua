@@ -139,6 +139,8 @@ OrionLib:MakeNotification({
 	Image = "rbxassetid://4483345998",
 	Time = 5
 })
+wait(1)
+LoadScript()
 end
 	end
 	end	  
@@ -160,6 +162,8 @@ Tab:AddTextbox({
 	Image = "rbxassetid://4483345998",
 	Time = 5
 })
+wait(1)
+LoadScript()
 else
 if PandaAuth:ValidateKey(service, Value) then 
 OrionLib:MakeNotification({
@@ -193,3 +197,7 @@ Tab:AddButton({
       print(PandaAuth:GetLink(service))
   	end    
 })
+
+function LoadScript()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/CorruptedClan/BlastSources/main/Genesis%20Sources/Loader/source.lua))()
+end
