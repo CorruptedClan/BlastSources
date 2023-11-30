@@ -1,3 +1,4 @@
+--[[
 if debug.info(1, "l") ~= 1 then
     game.Players.LocalPlayer:Kick("Safe dude..")
         while true do end
@@ -198,7 +199,7 @@ Tab:AddButton({
   	end    
 })
 
-function LoadScript()
+function LoadScript()]]
 loadstring(game:HttpGet("https://raw.githubusercontent.com/CorruptedClan/BlastSources/main/Genesis%20Sources/Loader/source.lua"))()
-Orion:Destroy()
-end
+--Orion:Destroy()
+--end
