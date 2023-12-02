@@ -1,1 +1,1 @@
-loadstring(game:HttpGet("https://github.com/CorruptedClan/BlastSources/blob/main/Genesis%20Sources/Loader/source.lua"))()
+print("discontinued for now...")
